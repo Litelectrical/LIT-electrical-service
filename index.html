@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIT Electrical & Service </title>
+  <meta name="description" content="LIT Electrical & Service — 工业级标准，自有团队，不转包不分包，雪兰莪吉隆坡专业电气、涂装、防水、冷气、翻新工程">
+  <meta name="keywords" content="电气服务,水电,油漆,防水,冷气维修,CCTV,装修,雪兰莪,吉隆坡,LIT Electrical">
+  <title>LIT Electrical & Service | 精工工程 · 品质为先</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
@@ -15,13 +17,9 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .gradient-bg {
-      background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 50%, #F97316 100%);
-    }
     .card-hover { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
     .accent-bar { width: 60px; height: 3px; background: linear-gradient(90deg, #2563EB, #F97316); border-radius: 2px; }
-    /* 三语显示控制 */
     .lang-zh, .lang-en, .lang-ms { display: none; }
     [data-lang="zh"] .lang-zh { display: inline; }
     [data-lang="en"] .lang-en { display: inline; }
@@ -32,63 +30,57 @@
                         radial-gradient(circle at 80% 30%, rgba(249,115,22,0.12) 0%, transparent 50%);
     }
     .service-icon {
-      width: 56px; height: 56px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
+      width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+      border-radius: 14px; background: linear-gradient(135deg, #eff6ff 0%, #fff7ed 100%);
       color: #2563eb; font-size: 24px; flex-shrink: 0;
     }
     .stat-ring {
-      width: 100px; height: 100px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, #2563EB, #F97316);
-      padding: 3px;
+      width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #2563EB, #F97316); padding: 3px;
     }
     .stat-inner {
-      width: 100%; height: 100%; border-radius: 50%;
-      background: white; display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
+      width: 100%; height: 100%; border-radius: 50%; background: white;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
     }
-    .quote-card {
-      border-left: 3px solid #2563EB;
-      background: linear-gradient(90deg, #f8fafc 0%, #ffffff 100%);
+    .check-item {
+      border-left: 2px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(90deg, #2563EB, #F97316) border-box;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 8px; }
+    .logo-circle {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, #2563EB, #F97316);
+      color: white; font-weight: bold; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
   </style>
 </head>
 <body class="bg-white text-slate-900 antialiased" data-lang="zh">
 
-  <!-- 顶部导航 + 语言切换 -->
+  <!-- 导航栏 -->
   <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-slate-100/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16">
-      <a href="#" class="font-bold text-xl tracking-tight">
-        <span class="gradient-text">LIT</span>
+      <a href="#" class="logo-wrap font-bold text-xl tracking-tight">
+        <span class="logo-circle">LIT</span>
+        <span class="gradient-text font-bold">LIT</span>
         <span class="text-slate-700 font-normal ml-1 hidden sm:inline">Electrical & Service</span>
       </a>
-      <!-- 语言切换按钮组 -->
       <div class="flex items-center gap-1 text-sm">
         <button onclick="setLang('zh')" class="px-3 py-1.5 rounded hover:bg-slate-100 lang-btn border border-transparent" data-l="zh">中文</button>
         <button onclick="setLang('en')" class="px-3 py-1.5 rounded hover:bg-slate-100 lang-btn border border-transparent" data-l="en">English</button>
         <button onclick="setLang('ms')" class="px-3 py-1.5 rounded hover:bg-slate-100 lang-btn border border-transparent" data-l="ms">Bahasa Melayu</button>
       </div>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="#services" class="hover:text-slate-900">
-          <span class="lang-zh">服务</span><span class="lang-en">Services</span><span class="lang-ms">Perkhidmatan</span>
-        </a>
-        <a href="#experience" class="hover:text-slate-900">
-          <span class="lang-zh">项目经验</span><span class="lang-en">Experience</span><span class="lang-ms">Pengalaman</span>
-        </a>
-        <a href="#trust" class="hover:text-slate-900">
-          <span class="lang-zh">为什么选我们</span><span class="lang-en">Why Us</span><span class="lang-ms">Mengapa Kami</span>
-        </a>
-        <a href="#payment" class="hover:text-slate-900">
-          <span class="lang-zh">付款方案</span><span class="lang-en">Payment Plans</span><span class="lang-ms">Pelan Bayaran</span>
-        </a>
-        <a href="#contact" class="hover:text-slate-900">
-          <span class="lang-zh">联系</span><span class="lang-en">Contact</span><span class="lang-ms">Hubungi</span>
-        </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-slate-900"><span class="lang-zh">关于我们</span><span class="lang-en">About</span><span class="lang-ms">Tentang</span></a>
+        <a href="#services" class="hover:text-slate-900"><span class="lang-zh">服务范围</span><span class="lang-en">Services</span><span class="lang-ms">Perkhidmatan</span></a>
+        <a href="#standards" class="hover:text-slate-900"><span class="lang-zh">施工标准</span><span class="lang-en">Standards</span><span class="lang-ms">Piawaian</span></a>
+        <a href="#experience" class="hover:text-slate-900"><span class="lang-zh">项目案例</span><span class="lang-en">Portfolio</span><span class="lang-ms">Projek</span></a>
+        <a href="#contact" class="hover:text-slate-900"><span class="lang-zh">联系我们</span><span class="lang-en">Contact</span><span class="lang-ms">Hubungi</span></a>
       </nav>
-      <a href="https://wa.me/60169121417?text=您好！想了解您的项目经验与报价。" target="_blank"
-         class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium transition shadow-sm">
+      <a href="https://wa.me/60169121417?text=您好！想咨询项目服务。" target="_blank"
+         class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium transition shadow-sm whitespace-nowrap">
         <i class="fa-brands fa-whatsapp mr-1.5"></i>WhatsApp
       </a>
     </div>
@@ -99,184 +91,282 @@
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-amber-400 font-semibold text-sm tracking-wider mb-4 flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full text-xs">
-              <i class="fa-solid fa-award"></i>
-              <span class="lang-zh">大厂历练 · 正规标准 · 值得信赖</span>
-              <span class="lang-en">Trained in Large Projects · Proven Standards</span>
-              <span class="lang-ms">Berpengalaman Projek Besar · Piawaian Terjamin</span>
-            </span>
+          <p class="text-amber-400 font-semibold text-sm tracking-wider mb-4">
+            <i class="fa-solid fa-award"></i>
+            <span class="lang-zh">工业级标准 · 持证上岗 · 全程质保 · 售后无忧</span>
+            <span class="lang-en">Industrial Standards · Certified · Warranty</span>
+            <span class="lang-ms">Piawaian Kilang · Bersijil · Jaminan Kualiti</span>
           </p>
           <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            <span class="lang-zh">精工工程 · 省心托付</span>
-            <span class="lang-en">Precision Work · Peace of Mind</span>
-            <span class="lang-ms">Kerja Kemas · Tenang Hati</span>
-            <br>
-            <span class="text-amber-400">
-              <span class="lang-zh">懂标准 · 守规范 · 重安全</span>
-              <span class="lang-en">Standards · Safety · Quality</span>
-              <span class="lang-ms">Piawaian · Keselamatan · Kualiti</span>
-            </span>
+            <span class="lang-zh">精工工程 · 品质托付</span>
+            <span class="lang-en">Precision Engineering · Quality Assured</span>
+            <span class="lang-ms">Kejuruteraan Tepat · Kualiti Terjamin</span>
           </h1>
-          <p class="text-lg text-slate-300 mb-8 max-w-xl">
-            <span class="lang-zh">Mr.Chun 带领自有团队，不转包不分包。从大型工厂项目历练到直接服务您，同样的严谨标准，更直接省心。</span>
-            <span class="lang-en">Led by Mr.Chun — in-house team, no outsourcing. Bringing industrial standards to your project, with direct accountability.</span>
-            <span class="lang-ms">Dipimpin Mr.Chun — pasukan sendiri, tiada subkontraktor. Kualiti kilang besar untuk projek anda.</span>
+          <p class="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed">
+            <span class="lang-zh">LIT Electrical 由 Mr.Chun 亲自带队，自有团队、不转包不分包。拥有大型工厂建设与维护实战经验，把工业级严谨标准带到您的住宅、商铺、园区项目。</span>
+            <span class="lang-en">Led by Mr.Chun — in-house team, no outsourcing. Experienced in large-scale factory construction, bringing industrial standards to your home and business.</span>
+            <span class="lang-ms">Dipimpin Mr.Chun — pasukan sendiri, tiada subkontraktor. Berpengalaman dalam pembinaan kilang besar, membawa kualiti industri ke rumah & bisnes anda.</span>
           </p>
           
-          <div class="flex flex-wrap gap-6 mb-10">
-            <div class="stat-ring">
+          <div class="flex flex-wrap gap-4 mb-10">
+            <div class="stat-ring" style="width: 80px; height: 80px;">
               <div class="stat-inner">
-                <p class="font-bold text-lg text-slate-900">10+</p>
-                <p class="text-xs text-slate-500">
-                  <span class="lang-zh">年经验</span>
-                  <span class="lang-en">Years Exp.</span>
-                  <span class="lang-ms">Tahun</span>
-                </p>
+                <p class="font-bold text-sm text-slate-900">10+</p>
+                <p class="text-xs text-slate-500"><span class="lang-zh">年经验</span></p>
               </div>
             </div>
-            <div class="stat-ring">
+            <div class="stat-ring" style="width: 80px; height: 80px;">
               <div class="stat-inner">
-                <p class="font-bold text-lg text-slate-900">🏭</p>
-                <p class="text-xs text-slate-500">
-                  <span class="lang-zh">工厂级</span>
-                  <span class="lang-en">Industrial</span>
-                  <span class="lang-ms">Piawaian Kilang</span>
-                </p>
+                <p class="font-bold text-sm text-slate-900">🏭</p>
+                <p class="text-xs text-slate-500"><span class="lang-zh">工业级</span></p>
               </div>
             </div>
-            <div class="stat-ring">
+            <div class="stat-ring" style="width: 80px; height: 80px;">
               <div class="stat-inner">
-                <p class="font-bold text-lg text-slate-900">7天</p>
-                <p class="text-xs text-slate-500">
-                  <span class="lang-zh">售后响应</span>
-                  <span class="lang-en">Support</span>
-                  <span class="lang-ms">Responsif</span>
-                </p>
+                <p class="font-bold text-sm text-slate-900">7天</p>
+                <p class="text-xs text-slate-500"><span class="lang-zh">快速响应</span></p>
               </div>
             </div>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#experience" class="bg-amber-500 hover:bg-amber-600 px-8 py-3.5 rounded-lg font-medium transition">
-              <span class="lang-zh">查看项目经验</span>
-              <span class="lang-en">View Portfolio</span>
-              <span class="lang-ms">Lihat Projek</span>
+            <a href="#contact" class="bg-amber-500 hover:bg-amber-600 px-8 py-3.5 rounded-lg font-medium transition">
+              <span class="lang-zh">免费咨询</span>
+              <span class="lang-en">Free Consultation</span>
+              <span class="lang-ms">Konsultasi Percuma</span>
             </a>
-            <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-3.5 rounded-lg font-medium transition">
-              <span class="lang-zh">面谈细说详情</span>
-              <span class="lang-en">Discuss in Detail</span>
-              <span class="lang-ms">Perbincangan</span>
+            <a href="#services" class="bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-3.5 rounded-lg font-medium transition">
+              <span class="lang-zh">查看服务</span>
+              <span class="lang-en">View Services</span>
+              <span class="lang-ms">Lihat Perkhidmatan</span>
             </a>
-          </div>
-        </div>
-        
-        <div class="hidden md:block">
-          <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 p-1">
-            <div class="rounded-xl p-6 bg-gradient-to-br from-slate-900/80 to-slate-800/80">
-              <h3 class="font-bold text-lg mb-4">
-                <span class="lang-zh">服务范围</span>
-                <span class="lang-en">What We Do</span>
-                <span class="lang-ms">Perkhidmatan Kami</span>
-              </h3>
-              <div class="grid grid-cols-2 gap-3 text-sm">
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-paint-roller text-amber-400"></i>
-                  <span><span class="lang-zh">油漆涂装</span><span class="lang-en">Painting</span><span class="lang-ms">Mengecat</span></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-umbrella text-blue-400"></i>
-                  <span><span class="lang-zh">防水补漏</span><span class="lang-en">Waterproofing</span><span class="lang-ms">Kalis Air</span></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-snowflake text-cyan-400"></i>
-                  <span><span class="lang-zh">冷气维护</span><span class="lang-en">Aircon Service</span><span class="lang-ms">Penyaman Udara</span></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-roof text-slate-300"></i>
-                  <span><span class="lang-zh">屋顶工程</span><span class="lang-en">Roofing</span><span class="lang-ms">Bumbung</span></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-faucet text-teal-400"></i>
-                  <span><span class="lang-zh">水电管线</span><span class="lang-en">Plumbing & Electrical</span><span class="lang-ms">Paip & Elektrik</span></span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <i class="fa-solid fa-video text-red-400"></i>
-                  <span><span class="lang-zh">CCTV安装</span><span class="lang-en">CCTV</span><span class="lang-ms">Pemasangan CCTV</span></span>
-                </div>
-                <div class="flex items-center gap-2 col-span-2">
-                  <i class="fa-solid fa-tree text-green-400"></i>
-                  <span><span class="lang-zh">园区维护 · 整体翻新</span><span class="lang-en">Maintenance & Renovation</span><span class="lang-ms">Penyelenggaraan & Ubahsuai</span></span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 服务板块 -->
-  <section id="services" class="py-24 px-4">
+  <!-- 关于我们 -->
+  <section id="about" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="accent-bar mx-auto mb-5"></div>
+        <h2 class="text-2xl md:text-3xl font-bold">
+          <span class="lang-zh">关于 LIT Electrical & Service</span>
+          <span class="lang-en">About Us</span>
+          <span class="lang-ms">Tentang Kami</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4 text-slate-600">
+          <p>
+            <span class="lang-zh">由 Mr.Chun 创立并亲自带队。核心成员均有 10+ 年行业经验，曾长期参与大型工厂建设与维护项目，在高标准工业环境中历练成长。</span>
+            <span class="lang-en">Founded and led by Mr.Chun. Our team has over 10 years of experience in industrial construction and maintenance, bringing proven expertise to every project.</span>
+          </p>
+          <p>
+            <span class="lang-zh">从专业分包到直接服务——去掉中间环节，把工业级标准带给每一位客户。不转包、不分包、责任到人。</span>
+            <span class="lang-en">From subcontracting to direct service — eliminating middlemen, bringing industrial standards to every client. No outsourcing, clear accountability.</span>
+          </p>
+          <p class="font-bold text-slate-800">
+            <span class="lang-zh">LIT = Loyalty · Integrity · Trust</span>
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-blue-50 p-6 rounded-2xl">
+            <i class="fa-solid fa-shield-halved text-blue-600 text-2xl mb-3"></i>
+            <h3 class="font-bold mb-2"><span class="lang-zh">安全第一</span></h3>
+            <p class="text-sm text-slate-600"><span class="lang-zh">持证上岗、规范施工、全程质保</span></p>
+          </div>
+          <div class="bg-amber-50 p-6 rounded-2xl">
+            <i class="fa-solid fa-book-open text-amber-600 text-2xl mb-3"></i>
+            <h3 class="font-bold mb-2"><span class="lang-zh">记录完整</span></h3>
+            <p class="text-sm text-slate-600"><span class="lang-zh">方案清单、过程记录、验收签字</span></p>
+          </div>
+          <div class="bg-emerald-50 p-6 rounded-2xl">
+            <i class="fa-solid fa-handshake text-emerald-600 text-2xl mb-3"></i>
+            <h3 class="font-bold mb-2"><span class="lang-zh">责任到人</span></h3>
+            <p class="text-sm text-slate-600"><span class="lang-zh">负责人全程跟进，不转包不分包</span></p>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-2xl">
+            <i class="fa-solid fa-clock-rotate-left text-slate-600 text-2xl mb-3"></i>
+            <h3 class="font-bold mb-2"><span class="lang-zh">售后保障</span></h3>
+            <p class="text-sm text-slate-600"><span class="lang-zh">快速响应、定期回访、不拖延</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务范围 -->
+  <section id="services" class="py-24 px-4 bg-slate-50/50">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <div class="accent-bar mx-auto mb-5"></div>
         <h2 class="text-2xl md:text-3xl font-bold">
-          <span class="lang-zh">专业服务 · 一站式解决</span>
-          <span class="lang-en">Our Services · Complete Solutions</span>
-          <span class="lang-ms">Perkhidmatan Profesional · Penyelesaian Lengkap</span>
+          <span class="lang-zh">一站式工程服务</span>
+          <span class="lang-en">Our Services</span>
+          <span class="lang-ms">Perkhidmatan Kami</span>
         </h2>
-        <p class="text-slate-500 mt-3 max-w-2xl mx-auto">
-          <span class="lang-zh">每项工序按正规标准执行，经得起时间检验</span>
-          <span class="lang-en">Meticulous execution, built to last</span>
-          <span class="lang-ms">Setiap kerja mengikut piawaian, tahan lama</span>
-        </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- 卡片1 -->
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
           <div class="service-icon mb-4"><i class="fa-solid fa-paint-roller"></i></div>
-          <h3 class="font-bold text-lg mb-2">
+          <h3 class="font-bold text-lg mb-3">
             <span class="lang-zh">涂装与防水工程</span>
             <span class="lang-en">Painting & Waterproofing</span>
-            <span class="lang-ms">Mengecat & Kalis Air</span>
           </h3>
-          <ul class="text-sm text-slate-600 space-y-1.5 mt-3">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">内外墙涂装、防霉抗碱</span><span class="lang-en">Interior & exterior painting, anti-mould</span><span class="lang-ms">Mengecat dalaman & luaran, anti-kulat</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">屋面/露台/卫生间防水补漏</span><span class="lang-en">Roof, balcony & bathroom waterproofing</span><span class="lang-ms">Kalis air bumbung, balkoni & bilik mandi</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">工业级标准、质保承诺</span><span class="lang-en">Industrial standards with warranty</span><span class="lang-ms">Piawaian industri dengan jaminan</span></span></li>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">墙面涂装系统</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">屋面防水处理</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">补漏与维修</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">防霉防潮</span></span></li>
           </ul>
         </div>
 
-        <!-- 卡片2 -->
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
           <div class="service-icon mb-4"><i class="fa-solid fa-bolt"></i></div>
-          <h3 class="font-bold text-lg mb-2">
-            <span class="lang-zh">电气与冷气系统</span>
-            <span class="lang-en">Electrical & Aircon</span>
-            <span class="lang-ms">Elektrik & Penyaman Udara</span>
+          <h3 class="font-bold text-lg mb-3">
+            <span class="lang-zh">电气与智能系统</span>
+            <span class="lang-en">Electrical Systems</span>
           </h3>
-          <ul class="text-sm text-slate-600 space-y-1.5 mt-3">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">线路布设、开关灯具安装</span><span class="lang-en">Wiring, switches & lighting</span><span class="lang-ms">Pendawaian, suis & lampu</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">冷气安装/清洗/维修</span><span class="lang-en">Aircon install, service & repair</span><span class="lang-ms">Pasang, servis & baiki penyaman udara</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">CCTV规划布线与安装</span><span class="lang-en">CCTV design & installation</span><span class="lang-ms">Reka & pasang CCTV</span></span></li>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">线路布设</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">照明与开关</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">CCTV 监控</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">故障排查</span></span></li>
           </ul>
         </div>
 
-        <!-- 卡片3 -->
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
-          <div class="service-icon mb-4"><i class="fa-solid fa-hammer"></i></div>
-          <h3 class="font-bold text-lg mb-2">
-            <span class="lang-zh">综合维修与改造</span>
-            <span class="lang-en">Maintenance & Renovation</span>
-            <span class="lang-ms">Penyelenggaraan & Pengubahsuaian</span>
+          <div class="service-icon mb-4"><i class="fa-solid fa-snowflake"></i></div>
+          <h3 class="font-bold text-lg mb-3">
+            <span class="lang-zh">冷气与维护</span>
+            <span class="lang-en">Aircon & Maintenance</span>
           </h3>
-          <ul class="text-sm text-slate-600 space-y-1.5 mt-3">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">屋顶/水管/破损修复</span><span class="lang-en">Roof, plumbing & general repairs</span><span class="lang-ms">Baiki bumbung, paip & kerosakan</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">局部翻新、整体改造</span><span class="lang-en">Partial & full renovation</span><span class="lang-ms">Pengubahsuaian sebahagian & keseluruhan</span></span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 mt-0.5"></i><span><span class="lang-zh">工完场清、整洁交付</span><span class="lang-en">Clean & tidy handover</span><span class="lang-ms">Serah kerja bersih & kemas</span></span></li>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">安装与移机</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">深度清洗</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">维修与加冷媒</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">定期保养</span></span></li>
           </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+          <div class="service-icon mb-4"><i class="fa-solid fa-faucet"></i></div>
+          <h3 class="font-bold text-lg mb-3">
+            <span class="lang-zh">给排水工程</span>
+            <span class="lang-en">Plumbing</span>
+          </h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">水管布设</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">漏水检修</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">洁具安装</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">排水疏通</span></span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+          <div class="service-icon mb-4"><i class="fa-solid fa-house-circle-check"></i></div>
+          <h3 class="font-bold text-lg mb-3">
+            <span class="lang-zh">屋顶与建筑维护</span>
+            <span class="lang-en">Roofing & Building</span>
+          </h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">屋顶检查维护</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">檐沟清理</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">外墙修复</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">定期巡检</span></span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover">
+          <div class="service-icon mb-4"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3 class="font-bold text-lg mb-3">
+            <span class="lang-zh">整体翻新改造</span>
+            <span class="lang-en">Renovation</span>
+          </h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">空间规划设计</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">拆改水电</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">材料采购协助</span></span></li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500"></i><span><span class="lang-zh">进度可视化</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 施工标准 -->
+  <section id="standards" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="accent-bar mx-auto mb-5"></div>
+        <h2 class="text-2xl md:text-3xl font-bold">
+          <span class="lang-zh">我们的施工标准</span>
+          <span class="lang-en">Our Standards</span>
+          <span class="lang-ms">Piawaian Kami</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div class="p-5 bg-blue-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-list-check text-blue-600"></i>
+              <span class="lang-zh">方案先行</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">现场评估→书面方案→材料清单→报价单→双方签字确认</span>
+            </p>
+          </div>
+          <div class="p-5 bg-emerald-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-hard-hat text-emerald-600"></i>
+              <span class="lang-zh">安全规范</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">持证上岗、防护到位、用电规范、安全第一</span>
+            </p>
+          </div>
+          <div class="p-5 bg-amber-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-file-circle-check text-amber-600"></i>
+              <span class="lang-zh">工序分步</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">隐蔽工程验收→拍照留档→分项确认→分步推进</span>
+            </p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="p-5 bg-slate-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-boxes-stacked text-slate-600"></i>
+              <span class="lang-zh">材料透明</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">品牌规格提前列明，正品正用，进场可查验</span>
+            </p>
+          </div>
+          <div class="p-5 bg-slate-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-broom text-slate-600"></i>
+              <span class="lang-zh">工完场清</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">每日清理，完工彻底清扫，整洁交付</span>
+            </p>
+          </div>
+          <div class="p-5 bg-slate-50 rounded-xl">
+            <h3 class="font-bold flex items-center gap-2 mb-2">
+              <i class="fa-solid fa-shield-check text-slate-600"></i>
+              <span class="lang-zh">质保有据</span>
+            </h3>
+            <p class="text-sm text-slate-600">
+              <span class="lang-zh">质保范围书面写明，接到反馈及时响应</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -288,227 +378,63 @@
       <div class="text-center mb-16">
         <div class="accent-bar mx-auto mb-5"></div>
         <h2 class="text-2xl md:text-3xl font-bold">
-          <span class="lang-zh">项目经验 · 工业级历练</span>
-          <span class="lang-en">Project Experience · Industrial Background</span>
-          <span class="lang-ms">Pengalaman Projek · Latar Belakang Industri</span>
+          <span class="lang-zh">项目经验</span>
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-ms">Portfolio</span>
         </h2>
-        <p class="text-slate-500 mt-3 max-w-2xl mx-auto">
-          <span class="lang-zh">为尊重合作方隐私，单位名称面谈时详告 · 经验真实可查</span>
-          <span class="lang-en">Names shared in confidence · Genuine experience</span>
-          <span class="lang-ms">Nama didedahkan semasa perbincangan · Pengalaman sah</span>
+        <p class="text-slate-500 mt-3">
+          <span class="lang-zh">大型制造业工厂建设与维护项目、商业园区改造工程、工业级标准施工</span>
         </p>
       </div>
 
-      <div class="space-y-8">
-        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-            <div class="md:w-1/4">
-              <span class="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-medium mb-3">
-                <i class="fa-solid fa-building mr-1.5"></i>
-                <span class="lang-zh">大型制造业</span>
-                <span class="lang-en">Manufacturing</span>
-                <span class="lang-ms">Pembuatan</span>
-              </span>
-              <h3 class="font-bold text-xl text-slate-800 mb-2">
-                <span class="lang-zh">厂区建设维护项目</span>
-                <span class="lang-en">Factory Construction & Maintenance</span>
-                <span class="lang-ms">Pembinaan & Penyelenggaraan Kilang</span>
-              </h3>
-            </div>
-            <ul class="md:w-3/4 grid md:grid-cols-2 gap-4 text-slate-600 text-sm">
-              <li class="flex items-start gap-3"><i class="fa-solid fa-check-double text-emerald-500 mt-1"></i><span><span class="lang-zh">高标准涂装与防水工程</span><span class="lang-en">High-standard painting & waterproofing</span><span class="lang-ms">Mengecat & kalis air berkualiti tinggi</span></span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-check-double text-emerald-500 mt-1"></i><span><span class="lang-zh">机电配套施工与进度配合</span><span class="lang-en">Electrical & mechanical works</span><span class="lang-ms">Kerja elektrik & mekanikal</span></span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-check-double text-emerald-500 mt-1"></i><span><span class="lang-zh">全程遵守安全制度、持证上岗</span><span class="lang-en">Full safety compliance</span><span class="lang-ms">Mematuhi peraturan keselamatan</span></span></li>
-              <li class="flex items-start gap-3"><i class="fa-solid fa-check-double text-emerald-500 mt-1"></i><span><span class="lang-zh">工序记录完整、验收合格交付</span><span class="lang-en">Fully documented & certified handover</span><span class="lang-ms">Dokumen lengkap & serah terima</span></span></li>
-            </ul>
-          </div>
-        </div>
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+        <h3 class="font-bold text-xl mb-4">
+          <span class="lang-zh">大型制造业工厂项目</span>
+        </h3>
+        <ul class="grid md:grid-cols-2 gap-4 text-slate-600">
+          <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">高标准涂装与防水系统</span></span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">电气与机电配套施工</span></span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">安全与合规全程落实</span></span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">过程记录与验收交付</span></span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 为什么选我们 -->
-  <section id="trust" class="py-24 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <div class="accent-bar mx-auto mb-5"></div>
-        <h2 class="text-2xl md:text-3xl font-bold">
-          <span class="lang-zh">为什么选择我们？</span>
-          <span class="lang-en">Why Choose LIT Electrical & Service?</span>
-          <span class="lang-ms">Mengapa Memilih Kami?</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-5">
-          <div class="flex items-start gap-4 p-4 bg-blue-50/50 rounded-xl">
-            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0"><i class="fa-solid fa-industry"></i></div>
-            <div>
-              <h3 class="font-bold text-slate-800 mb-1">
-                <span class="lang-zh">大厂历练，标准成熟</span>
-                <span class="lang-en">Industrial-Grade Standards</span>
-                <span class="lang-ms">Piawaian Tahap Industri</span>
-              </h3>
-              <p class="text-sm text-slate-600">
-                <span class="lang-zh">懂规范、重安全、守流程，不是散队而是按正规体系做事</span>
-                <span class="lang-en">Formal procedures, safety-first, not casual contractors</span>
-                <span class="lang-ms">Prosedur formal, utamakan keselamatan, bukan kontraktor biasa</span>
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4 p-4 bg-emerald-50/50 rounded-xl">
-            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0"><i class="fa-solid fa-people-group"></i></div>
-            <div>
-              <h3 class="font-bold text-slate-800 mb-1">
-                <span class="lang-zh">自有团队，不转包不分包</span>
-                <span class="lang-en">In-House Team, Direct Accountability</span>
-                <span class="lang-ms">Pasukan Sendiri, Tanggungjawab Terus</span>
-              </h3>
-              <p class="text-sm text-slate-600">
-                <span class="lang-zh">带队人就是负责人，沟通直接、质量可控</span>
-                <span class="lang-en">Direct leadership, clear responsibility, quality assured</span>
-                <span class="lang-ms">Pemimpin bertanggungjawab terus, kualiti terjamin</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="space-y-5">
-          <div class="flex items-start gap-4 p-4 bg-amber-50/50 rounded-xl">
-            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 flex-shrink-0"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-            <div>
-              <h3 class="font-bold text-slate-800 mb-1">
-                <span class="lang-zh">透明方案，付款灵活</span>
-                <span class="lang-en">Clear Plans, Flexible Payment</span>
-                <span class="lang-ms">Pelan Telus, Bayaran Fleksibel</span>
-              </h3>
-              <p class="text-sm text-slate-600">
-                <span class="lang-zh">不一次性收全款，留质保尾款，方案提前确认</span>
-                <span class="lang-en">No full upfront payment, retention sum included, plans confirmed</span>
-                <span class="lang-ms">Tiada bayaran penuh di awal, ada jaminan kualiti, pelan dipersetujui</span>
-              </p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl">
-            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 flex-shrink-0"><i class="fa-solid fa-handshake"></i></div>
-            <div>
-              <h3 class="font-bold text-slate-800 mb-1">
-                <span class="lang-zh">真诚面谈，详情细说</span>
-                <span class="lang-en">Transparent & Honest Discussion</span>
-                <span class="lang-ms">Perbincangan Jujur & Terbuka</span>
-              </h3>
-              <p class="text-sm text-slate-600">
-                <span class="lang-zh">面谈时可细说项目细节、出示现场记录与照片</span>
-                <span class="lang-en">Full details & photos shared during meeting</span>
-                <span class="lang-ms">Butiran penuh & foto dikongsi semasa perbincangan</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 付款方案 -->
-  <section id="payment" class="py-24 px-4 bg-blue-50/30">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <div class="accent-bar mx-auto mb-5"></div>
-        <h2 class="text-2xl md:text-3xl font-bold">
-          <span class="lang-zh">灵活付款方案 · 合作稳妥放心</span>
-          <span class="lang-en">Flexible Payment Plans</span>
-          <span class="lang-ms">Pelan Bayaran Fleksibel · Kerjasama Tenang</span>
-        </h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border-2 border-blue-200 card-hover">
-          <span class="inline-block bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
-            <span class="lang-zh">首次合作推荐</span>
-            <span class="lang-en">Recommended</span>
-            <span class="lang-ms">Disyorkan</span>
-          </span>
-          <h3 class="text-xl font-bold mb-6 text-blue-700">
-            <span class="lang-zh">方案A · 3期分期 + 质保尾款</span>
-            <span class="lang-en">Plan A · 3 Instalments + Retention</span>
-            <span class="lang-ms">Pelan A · 3 Ansuran + Jaminan</span>
-          </h3>
-          <ul class="space-y-3 text-slate-600">
-            <li class="flex justify-between p-3 bg-blue-50 rounded-lg"><span class="font-medium">30%</span><span><span class="lang-zh">签约进场备料</span><span class="lang-en">Upon signing</span><span class="lang-ms">Semasa menandatangani</span></span></li>
-            <li class="flex justify-between p-3 bg-blue-50 rounded-lg"><span class="font-medium">35%</span><span><span class="lang-zh">关键工序完成</span><span class="lang-en">Mid-stage completion</span><span class="lang-ms">Peringkat pertengahan</span></span></li>
-            <li class="flex justify-between p-3 bg-blue-50 rounded-lg"><span class="font-medium">30%</span><span><span class="lang-zh">竣工验收合格</span><span class="lang-en">Final handover</span><span class="lang-ms">Serah terima akhir</span></span></li>
-            <li class="flex justify-between p-3 bg-amber-50 rounded-lg text-amber-700 font-medium"><span class="font-bold">5%</span><span><span class="lang-zh">质保尾款 · 满3个月结清</span><span class="lang-en">5% retention · settled after 3 months</span><span class="lang-ms">5% jaminan · dibayar selepas 3 bulan</span></span></li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 card-hover">
-          <h3 class="text-xl font-bold mb-6 text-slate-700">
-            <span class="lang-zh">方案B · 竣工后分期结算</span>
-            <span class="lang-en">Plan B · Deferred Payment</span>
-            <span class="lang-ms">Pelan B · Bayaran Selepas Siap</span>
-          </h3>
-          <p class="text-slate-500 text-sm mb-4">
-            <span class="lang-zh">适用于长期互信伙伴，详情面谈确认</span>
-            <span class="lang-en">For trusted partners, details discussed</span>
-            <span class="lang-ms">Untuk rakan dipercayai, butiran dibincang</span>
-          </p>
-          <ul class="space-y-3 text-slate-600 text-sm">
-            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">按节点确认进度，不催款</span><span class="lang-en">Progress-based, no pressure</span><span class="lang-ms">Mengikut kemajuan, tiada paksaan</span></span></li>
-            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">竣工签署验收单</span><span class="lang-en">Signed acceptance upon completion</span><span class="lang-ms">Dokumen penerimaan ditandatangani</span></span></li>
-            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i><span><span class="lang-zh">验收日起90天内分期付清</span><span class="lang-en">Paid within 90 days of handover</span><span class="lang-ms">Dibayar dalam 90 hari selepas siap</span></span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 联系板块 -->
+  <!-- 联系我们 -->
   <section id="contact" class="py-24 px-4 bg-slate-900 text-white">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
         <h2 class="text-2xl md:text-3xl font-bold mb-3">
           <span class="lang-zh">联系 Mr.Chun</span>
-          <span class="lang-en">Contact Mr.Chun</span>
-          <span class="lang-ms">Hubungi Mr.Chun</span>
+          <span class="lang-en">Contact Us</span>
+          <span class="lang-ms">Hubungi Kami</span>
         </h2>
-        <p class="text-slate-400 max-w-2xl mx-auto">
-          <span class="lang-zh">预约面谈，细说项目细节、过往案例、付款方案</span>
-          <span class="lang-en">Arrange a meeting to discuss details & plans</span>
-          <span class="lang-ms">Jadualkan pertemuan untuk bincang butiran & pelan</span>
+        <p class="text-slate-400">
+          <span class="lang-zh">免费咨询，详细方案，快速响应</span>
         </p>
       </div>
-      <div class="grid md:grid-cols-5 gap-10">
-        <div class="md:col-span-2 space-y-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-6">
           <div>
-            <p class="text-slate-400 text-sm mb-2">WhatsApp / Tel</p>
-            <a href="tel:+60169121417" class="block text-2xl font-light hover:text-emerald-400 transition">+60 16-912 1417</a>
+            <p class="text-slate-400 text-sm mb-2"><span class="lang-zh">电话 / WhatsApp</span></p>
+            <a href="tel:+60169121417" class="text-2xl font-light hover:text-emerald-400 transition">+60 16-912 1417</a>
           </div>
-          <a href="https://wa.me/60169121417?text=Hello!I'dliketodiscussmyproject." target="_blank" 
+          <a href="https://wa.me/60169121417?text=您好！想咨询项目服务。" target="_blank" 
              class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg font-medium transition">
             <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span><span class="lang-zh">预约面谈</span><span class="lang-en">Arrange Meeting</span><span class="lang-ms">Jadualkan Temu</span></span>
+            <span><span class="lang-zh">WhatsApp 咨询</span></span>
           </a>
-          <div class="pt-4 border-t border-white/10">
-            <p class="text-slate-400 text-sm mb-2">
-              <span class="lang-zh">服务区域</span>
-              <span class="lang-en">Service Area</span>
-              <span class="lang-ms">Kawasan Perkhidmatan</span>
-            </p>
-            <p class="text-sm">
-              <span class="lang-zh">雪兰莪 · 吉隆坡 · 周边区域</span>
-              <span class="lang-en">Selangor · KL · Surrounding Areas</span>
-              <span class="lang-ms">Selangor · KL · Kawasan Berdekatan</span>
-            </p>
-          </div>
         </div>
-        <form onsubmit="handleSubmit(event)" class="md:col-span-3 space-y-4">
-          <input type="text" id="name" required placeholder="您的姓名 / Your Name / Nama Anda"
-                 class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-white/30 text-white placeholder-slate-500">
-          <input type="tel" id="phone" required placeholder="联系电话 / Contact No / No. Telefon"
-                 class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-white/30 text-white placeholder-slate-500">
-          <textarea id="msg" rows="4" placeholder="项目需求 / Project Details / Butiran Projek"
-                    class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-white/30 text-white placeholder-slate-500 resize-none"></textarea>
+        <form onsubmit="handleSubmit(event)" class="space-y-4">
+          <input type="text" id="name" required placeholder="您的姓名"
+                 class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500">
+          <input type="tel" id="phone" required placeholder="联系电话"
+                 class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500">
+          <textarea id="msg" rows="4" placeholder="项目需求"
+                    class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-slate-500 resize-none"></textarea>
           <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 py-3 rounded-lg font-medium transition">
-            <span class="lang-zh">提交预约</span>
-            <span class="lang-en">Submit Request</span>
-            <span class="lang-ms">Hantar Permintaan</span>
+            <span class="lang-zh">提交咨询</span>
           </button>
         </form>
       </div>
@@ -517,40 +443,32 @@
 
   <!-- 页脚 -->
   <footer class="py-10 text-center border-t border-slate-100">
-    <p class="font-bold text-slate-900">LIT Electrical & Service — Mr.Chun</p>
+    <p class="font-bold text-slate-900">LIT Electrical & Service</p>
     <p class="mt-2 text-sm text-slate-500">
-      <span class="lang-zh">大厂历练 · 自有团队 · 面谈细说 · 品质为先</span>
-      <span class="lang-en">Industrial Experience · In-House Team · Quality First</span>
-      <span class="lang-ms">Pengalaman Industri · Pasukan Sendiri · Kualiti Diutamakan</span>
+      <span class="lang-zh">工业级标准 · 自有团队 · 品质为先 · 售后有保障</span>
     </p>
     <p class="mt-3 text-xs text-slate-400">© 2026 LIT Electrical & Service</p>
   </footer>
 
-  <!-- 语言切换脚本 -->
   <script>
     function setLang(lang) {
       document.body.setAttribute('data-lang', lang);
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('bg-slate-900', 'text-white', 'border-slate-900');
-        if (btn.dataset.l === lang) {
-          btn.classList.add('bg-slate-900', 'text-white', 'border-slate-900');
-        } else {
-          btn.classList.add('border-slate-200');
-        }
+        btn.classList.remove('bg-slate-900', 'text-white');
+        if (btn.dataset.l === lang) btn.classList.add('bg-slate-900', 'text-white');
       });
       localStorage.setItem('preferred_lang', lang);
     }
-    // 记住上次选择的语言
     const savedLang = localStorage.getItem('preferred_lang');
     if (savedLang) setLang(savedLang);
-    else setLang('zh'); // 默认中文
+    else setLang('zh');
 
     function handleSubmit(e) {
       e.preventDefault();
       alert(
-        document.body.dataset.lang === 'zh' ? '感谢您的信任！我们会尽快联系您预约面谈！' :
-        document.body.dataset.lang === 'ms' ? 'Terima kasih! Kami akan hubungi anda segera!' :
-        'Thank you! We will contact you shortly!'
+        document.body.dataset.lang === 'zh' ? '感谢您的咨询！我们会尽快联系您！' :
+        document.body.dataset.lang === 'en' ? 'Thank you! We will contact you soon!' :
+        'Terima kasih! Kami akan menghubungi anda segera!'
       );
       e.target.reset();
     }
